@@ -8,3 +8,8 @@ The Spine App iOS
 $ cordova prepare
 ```
 ## After that open up XCode , build the project and you are done
+.
+├── platforms                   
+├── ios
+├── src                     
+├── The Spine App.xcodeproj
