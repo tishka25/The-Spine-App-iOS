@@ -1,0 +1,77 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+ * {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;
+    /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;
+    /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;
+    /* prevent copy paste, to allow, change 'none' to 'text' */
+    /* background-color: #E4E4E4; */
+    background-color: white;
+    font-family: 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    /* font-size: 12px;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    text-transform: uppercase;
+    width: 100%; */
+}
+html, body {
+    height: 100%;
+    overflow: hidden;
+  }
+
+
+#notebookButton{
+    position: absolute;
+    border-color: white;
+    font-size: 22px;
+    color: white;
+    border-radius: 0px;
+    background: transparent;
+    border-style: solid;
+    border-width: 1px;
+    width: 57.43px;
+    height: 30px;
+    flex: 0 0 auto;
+    text-align: center;
+    vertical-align: center;
+    /* right:70%; */
+    /* margin-left: 100%; */
+    margin-right:70px ;
+    /* margin-left: -90px; */
+    top:9px;
+    right: 10px;
+
+}
+/* #notebookButton p{
+    left:50%;
+} */
+
+
+#mainFrame {
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- <meta name="viewport" content="maximum-scale=1.0, initial-scale=1.0, user-scalable=no, viewport-fit=cover"> -->
+    <!-- <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" /> -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'" /> -->
+
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/onsen/2.10.6/css/onsenui.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/onsen/2.10.6/css/old-onsen-css-components.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/onsen/2.10.6/js/onsenui.min.js"></script>
+    <script>
+        function displayField(event) {
+            var b = event.target.checked;
+            document.getElementById("surgery").hidden = !b;
+        }
+        window.onload = function(e) {
+            e.preventDefault();
+        };
+
+    </script>
+
+    <title>The Spine App</title>
+</head>
+
+<body scroll="no" style="margin: 0;widows: 100%;height: 100%;overflow: hidden;overflow-y: hidden">
+    <div class="app">
+
+        <div class="pages" id="loadingPage" style="text-align:center;padding-top:40%">
+            <svg class="progress-circular progress-circular--indeterminate">
+                <circle class="progress-circular__background" />
+                <circle class="progress-circular__primary progress-circular--indeterminate__primary" />
+                <circle class="progress-circular__secondary progress-circular--indeterminate__secondary" />
+            </svg>
+        </div>
+
+
+        <div class="pages" id="mainPage" style="position: fixed; right: 0; bottom: 0; left: 0;top: 0;-webkit-overflow-scrolling: touch;overflow-y: scroll;">
+            <div id="notebookButton" onclick="app.showPage('notebookPage')">
+                <img src="./img/notebook_icon.svg" style="width:57.43px;height: 30px;color: white" />
+            </div>
+            <!-- <iframe name="mainFrame" id="mainFrame" src="https://www.thespineapp.com" scrolling="yes" frameborder="0">
+            </iframe> -->
+            <embed name="mainFrame" id="mainFrame" src="https://www.thespineapp.com" scrolling="yes" frameborder="0"/></embed>
+        </div>
+        
+
+        <!-- Notebook page -->
+        <div class="pages" id="notebookPage" style="text-align: center; height: 100%;overflow: hidden;overflow-y: hidden;margin: 0">
+            <div class="toolbar" style="position: static">
+                <div class="toolbar__left" onclick="app.showPage('mainPage')">
+                    <span class="toolbar-button">
+                        <i class="fas fa-chevron-left" style="font-size:32px; vertical-align:-6px;"></i>
+                        Назад
+                    </span>
+                </div>
+                <div class="toolbar__center">
+                    Бележки
+                </div>
+                <div class="toolbar__right" onclick="app.saveNote()">
+                    <span class="toolbar-button">
+                        Запази
+                    </span>
+                </div>
+            </div>
+            <!--  -->
+            <div id="noteForm" style="text-align:left;margin-left: 10px">
+                <p style="opacity:0.4;font-size: 12px;">Дата</p>
+                <input type="date" id="dateTime" style="margin-bottom: 5%;" value="2017-06-13">
+                <textarea class="textarea" id="name" rows="1" style="width:100%;margin-bottom: 5%;margin-left:-10px"
+                    placeholder="Име"></textarea>
+                <textarea class="textarea" id="city" rows="1" style="width:100%;margin-bottom: 5%;margin-left:-10px"
+                    placeholder="Град"></textarea>
+                <textarea class="textarea" id="diagnose" rows="2" style="width:100%;margin-left:-10px" placeholder="Диагноза"></textarea>
+                <p style="opacity:0.4;font-size: 12px;">Препоръчвате ли операция?</p>
+                <label class="switch" style="margin-bottom:5%">
+                    <input type="checkbox" class="switch__input" id="recommends" onchange="displayField(event)">
+                    <div class="switch__toggle">
+                        <div class="switch__handle"></div>
+                    </div>
+                </label>
+                <textarea class="textarea" id="surgery" rows="3" style="width:100%;margin-left:-10px" placeholder="Каква операция?"
+                    hidden></textarea>
+            </div>
+
+            <button class="button button--outline" style="width:30%;height: 40px;font-size: 11px;position: absolute;left:10px;top:70%"
+                onclick="app.listNotes()">Виж Запазени</button>
+
+        </div>
+
+
+        <!-- Page for listing saved notes -->
+        <div class="pages" id="savedNotesPage">
+            <div class="toolbar" style="position: static">
+                <div class="toolbar__left" onclick="app.showPage('notebookPage')">
+                    <span class="toolbar-button">
+                        <i class="fas fa-chevron-left" style="font-size:32px; vertical-align:-6px;"></i>
+                        Назад
+                    </span>
+                </div>
+                <div class="toolbar__center">
+                    Запазени бележки
+                </div>
+            </div>
+            <ul class="list" id="fileEntries"></ul>
+        </div>
+        <!--  -->
+
+        <!-- Template page for showing selected saved note-->
+        <div class="pages" id="savedNotePage" hidden>
+            <div class="toolbar" style="position: static">
+                <div class="toolbar__left" onclick="app.listNotes()">
+                    <span class="toolbar-button">
+                        <i class="fas fa-chevron-left" style="font-size:32px; vertical-align:-6px;"></i>
+                        Назад
+                    </span>
+                </div>
+                <div class="toolbar__center" id="pageTitle">
+
+                </div>
+                <div class="toolbar__right" onclick="app.deleteFile(document.getElementById('pageTitle').innerHTML , ()=>app.listNotes())">
+                    <span class="toolbar-button">
+                        <!-- <i class="far fa-save"></i> -->
+                        Изтрий
+                    </span>
+                </div>
+            </div>
+
+            <div id="saved-noteForm" style="text-align:left;margin-left: 10px">
+                <p style="opacity:0.4;font-size: 12px;">Дата</p>
+                <input type="date" id="saved-dateTime" style="margin-bottom: 5%;" value="2017-06-13">
+                <textarea class="textarea" id="saved-name" rows="1" style="width:100%;margin-bottom: 5%;margin-left:-10px"
+                    placeholder="Име"></textarea>
+                <textarea class="textarea" id="saved-city" rows="1" style="width:100%;margin-bottom: 5%;margin-left:-10px"
+                    placeholder="Град"></textarea>
+                <textarea class="textarea" id="saved-diagnose" rows="2" style="width:100%;margin-left:-10px" placeholder="Диагноза"></textarea>
+                <p style="opacity:0.4;font-size: 12px;">Препоръчвате ли операция?</p>
+                <label class="switch" style="margin-bottom:5%">
+                    <input type="checkbox" class="switch__input" id="saved-recommends" onchange="displayField(event)">
+                    <div class="switch__toggle">
+                        <div class="switch__handle"></div>
+                    </div>
+                </label>
+                <textarea class="textarea" id="saved-surgery" rows="3" style="width:100%;margin-left:-10px" placeholder="Каква операция?"></textarea>
+            </div>
+
+            <button class="button button--outline" style="width:30%;height: 40px;font-size: 11px;position: absolute;left:10px;top:70%"
+                onclick="app.resaveNote()">Запази отново</button>
+
+        </div>
+
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>

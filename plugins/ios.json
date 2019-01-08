@@ -1,0 +1,36 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.THESPINEAPPLE.thespineapp"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.THESPINEAPPLE.thespineapp"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.THESPINEAPPLE.thespineapp"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.THESPINEAPPLE.thespineapp"
+    },
+    "cordova-plugin-wkwebview-engine": {
+      "PACKAGE_NAME": "com.THESPINEAPPLE.thespineapp"
+    },
+    "cordova-plugin-wkwebviewxhrfix": {
+      "PACKAGE_NAME": "com.THESPINEAPPLE.thespineapp"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.THESPINEAPPLE.thespineapp"
+    },
+    "cordova-plugin-screen-orientation": {
+      "PACKAGE_NAME": "com.THESPINEAPPLE.thespineapp"
+    }
+  },
+  "dependent_plugins": {}
+}

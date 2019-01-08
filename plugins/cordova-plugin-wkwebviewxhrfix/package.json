@@ -1,0 +1,70 @@
+{
+  "_args": [
+    [
+      "https://github.com/TheMattRay/cordova-plugin-wkwebviewxhrfix",
+      "/Users/teodorstanishev/Projects/TheSpineApp"
+    ]
+  ],
+  "_from": "git+https://github.com/TheMattRay/cordova-plugin-wkwebviewxhrfix.git",
+  "_id": "cordova-plugin-wkwebviewxhrfix@0.1.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/cordova-plugin-wkwebviewxhrfix",
+  "_phantomChildren": {},
+  "_requested": {
+    "hosted": {
+      "directUrl": "https://raw.githubusercontent.com/TheMattRay/cordova-plugin-wkwebviewxhrfix/master/package.json",
+      "gitUrl": "git://github.com/TheMattRay/cordova-plugin-wkwebviewxhrfix.git",
+      "httpsUrl": "git+https://github.com/TheMattRay/cordova-plugin-wkwebviewxhrfix.git",
+      "shortcut": "github:TheMattRay/cordova-plugin-wkwebviewxhrfix",
+      "ssh": "git@github.com:TheMattRay/cordova-plugin-wkwebviewxhrfix.git",
+      "sshUrl": "git+ssh://git@github.com/TheMattRay/cordova-plugin-wkwebviewxhrfix.git",
+      "type": "github"
+    },
+    "name": null,
+    "raw": "https://github.com/TheMattRay/cordova-plugin-wkwebviewxhrfix",
+    "rawSpec": "https://github.com/TheMattRay/cordova-plugin-wkwebviewxhrfix",
+    "scope": null,
+    "spec": "git+https://github.com/TheMattRay/cordova-plugin-wkwebviewxhrfix.git",
+    "type": "hosted"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git+https://github.com/TheMattRay/cordova-plugin-wkwebviewxhrfix.git#593eb98a155bd1f970276222be8c6bfa757568f4",
+  "_shasum": "f72d6d510f5a151365e7edbb598448727244fb63",
+  "_shrinkwrap": null,
+  "_spec": "https://github.com/TheMattRay/cordova-plugin-wkwebviewxhrfix",
+  "_where": "/Users/teodorstanishev/Projects/TheSpineApp",
+  "author": {
+    "name": "Matt Ray"
+  },
+  "bugs": {
+    "url": "https://github.com/themattray/cordova-plugin-wkwebviewxhrfix/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-wkwebviewxhrfix",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "dependencies": {},
+  "description": "Cordova plugin to fix local file XHR access inside WKWebView",
+  "devDependencies": {},
+  "gitHead": "593eb98a155bd1f970276222be8c6bfa757568f4",
+  "homepage": "https://github.com/themattray/cordova-plugin-wkwebviewxhrfix#readme",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "license": "MIT",
+  "name": "cordova-plugin-wkwebviewxhrfix",
+  "optionalDependencies": {},
+  "readme": "# cordova-plugin-wkwebviewxhrfix\nCordova plugin to fix local file access via XHR with WKWebView\n\n## Installation\n\nInstall the plugin by running:\n```\ncordova plugin add https://github.com/TheMattRay/cordova-plugin-wkwebviewxhrfix\n```\n\nThat's it! Seriously!",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/themattray/cordova-plugin-wkwebviewxhrfix.git"
+  },
+  "version": "0.1.0"
+}
