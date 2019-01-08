@@ -12,4 +12,4 @@ $ cordova prepare
 ├── platforms                   
 ├── ios
 ├── src                     
-├── The Spine App.xcodeproj
+└── The Spine App.xcodeproj
