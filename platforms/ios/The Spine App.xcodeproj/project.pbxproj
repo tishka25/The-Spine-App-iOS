@@ -28,10 +28,10 @@
 		41261E0B21E2DCB100CDEB37 /* back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41261E0821E2DCB000CDEB37 /* back@3x.png */; };
 		41261E0C21E2DCB100CDEB37 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 41261E0921E2DCB000CDEB37 /* back.png */; };
 		41261E0D21E2DCB100CDEB37 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41261E0A21E2DCB100CDEB37 /* back@2x.png */; };
+		412E07B821ED34E50053451A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412E07B721ED34E50053451A /* ViewController.swift */; };
 		416D809721E39F3800298403 /* backgroundImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 416D809521E39F3800298403 /* backgroundImage.jpg */; };
 		416D809921E3B34F00298403 /* errorSplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 416D809821E3B34F00298403 /* errorSplash.jpg */; };
 		416D809B21E3B3FF00298403 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416D809A21E3B3FF00298403 /* Reachability.swift */; };
-		41A8DAB421ECBCEC004F9A68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A8DAB321ECBCEC004F9A68 /* ViewController.swift */; };
 		41A8DAB721ECBDEF004F9A68 /* NotebookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A8DAB621ECBDEF004F9A68 /* NotebookViewController.m */; };
 		484E411733CA4AA3B7266C27 /* CDVWKWebViewEngine+FileXhrFix.m in Sources */ = {isa = PBXBuildFile; fileRef = 00818991013F4B81984E146C /* CDVWKWebViewEngine+FileXhrFix.m */; };
 		56D05C3B06F14DC4BE7D6F07 /* CDVWKWebViewEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = E014E63AA6ED4F32BD7997AA /* CDVWKWebViewEngine.m */; };
@@ -110,10 +110,10 @@
 		41261E0821E2DCB000CDEB37 /* back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@3x.png"; sourceTree = "<group>"; };
 		41261E0921E2DCB000CDEB37 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		41261E0A21E2DCB100CDEB37 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
+		412E07B721ED34E50053451A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		416D809521E39F3800298403 /* backgroundImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundImage.jpg; sourceTree = "<group>"; };
 		416D809821E3B34F00298403 /* errorSplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = errorSplash.jpg; sourceTree = "<group>"; };
 		416D809A21E3B3FF00298403 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
-		41A8DAB321ECBCEC004F9A68 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "../../../../../TheSpineApp/platforms/ios/The Spine App/Classes/ViewController.swift"; sourceTree = "<group>"; };
 		41A8DAB521ECBDEF004F9A68 /* NotebookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotebookViewController.h; sourceTree = "<group>"; };
 		41A8DAB621ECBDEF004F9A68 /* NotebookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotebookViewController.m; sourceTree = "<group>"; };
 		4C6E0A9985554D8E8A2C2C14 /* CDVWKWebViewEngine+FileXhrFix.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "CDVWKWebViewEngine+FileXhrFix.h"; path = "cordova-plugin-wkwebviewxhrfix/CDVWKWebViewEngine+FileXhrFix.h"; sourceTree = "<group>"; };
@@ -164,7 +164,7 @@
 				302D95F014D2391D003F00A1 /* MainViewController.xib */,
 				1D3623240D0F684500981E51 /* AppDelegate.h */,
 				1D3623250D0F684500981E51 /* AppDelegate.m */,
-				41A8DAB321ECBCEC004F9A68 /* ViewController.swift */,
+				412E07B721ED34E50053451A /* ViewController.swift */,
 				416D809A21E3B3FF00298403 /* Reachability.swift */,
 				41261DF021E18AF500CDEB37 /* TabBarController.swift */,
 				41261DCD21E134E600CDEB37 /* Main.storyboard */,
@@ -468,7 +468,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41A8DAB421ECBCEC004F9A68 /* ViewController.swift in Sources */,
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				41261DF121E18AF500CDEB37 /* TabBarController.swift in Sources */,
@@ -480,6 +479,7 @@
 				BE7AE8AECFB84BC09AEE1A92 /* CDVLocalFilesystem.m in Sources */,
 				AA0FAD9CEAD3407DA7998D3F /* CDVAssetLibraryFilesystem.m in Sources */,
 				56D05C3B06F14DC4BE7D6F07 /* CDVWKWebViewEngine.m in Sources */,
+				412E07B821ED34E50053451A /* ViewController.swift in Sources */,
 				8F4703B2C7D0490092A32E0C /* CDVWKWebViewUIDelegate.m in Sources */,
 				CBC69123AFA144B09A3F972D /* CDVWKProcessPoolFactory.m in Sources */,
 				484E411733CA4AA3B7266C27 /* CDVWKWebViewEngine+FileXhrFix.m in Sources */,
