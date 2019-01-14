@@ -3,7 +3,7 @@ The Spine App iOS
 
 ## Warning DO NOT delete iOS platform from cordva
 
-## In order to run type in the root of the project:
+## If you change the html and/or javascript, type in the root of the project:
 ```bash
 $ cordova prepare
 ```
