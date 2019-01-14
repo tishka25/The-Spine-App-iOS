@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -63,10 +62,10 @@
             </objects>
             <point key="canvasLocation" x="-474" y="-101"/>
         </scene>
-        <!--Main View Controller-->
+        <!--Notebook View Controller-->
         <scene sceneID="67a-nr-rqH">
             <objects>
-                <viewController id="Of8-OI-LMD" customClass="MainViewController" sceneMemberID="viewController">
+                <viewController id="Of8-OI-LMD" customClass="NotebookViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t7R-br-KUe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
