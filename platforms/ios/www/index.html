@@ -52,7 +52,7 @@
             <!--  -->
             <div id="noteForm" style="text-align:left;margin-left: 10px">
                 <p id="dateTimePlaceholder" style="opacity:0.4;font-size: 14px;">Дата*</p>
-                <input type="date" id="dateTime" style="margin-bottom: 5%;" value="2017-06-13">
+                <input type="date" id="dateTime" style="margin-bottom: 5%;">
 
                 <textarea class="textarea" id="title" rows="1" style="width:100%;margin-bottom: 5%;margin-left:-10px"
                     placeholder="Заглавие на бележката"></textarea>
@@ -82,7 +82,11 @@
 
         <!-- Page for listing saved notes -->
         <div class="pages" id="savedNotesPage">
-            <ul class="list" id="fileEntries"></ul>
+            <ul class="list" id="fileEntries">
+                <!-- <li class="list-item list-item--tappable">
+                    <div class="list-item__center" id="emptyListPlaceholder"  style="opacity:0.4;">Празно</div>
+                </li> -->
+            </ul>
         </div>
         <!--  -->
         </div>

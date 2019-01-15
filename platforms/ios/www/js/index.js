@@ -27,6 +27,12 @@ const notificationMessages = {
         en: "Success",
         de: "Notiz wurde erfolgreich gelöscht",
         ru: "Успешно удаленная заметка"
+    },
+    emptyListPlaceholder:{
+      bg:"Няма нищо запазено",
+      en:"Nothing saved",
+      de:"Nichts gerettet",
+      ru:"Ничего не сохранено"
     }
 
 };
@@ -60,6 +66,10 @@ var app = {
   onDeviceReady: function() {
     console.log("Device ready");
     app.showPage("notebookPage");
+    var currentdate = new Date(); 
+    var _dateTime = currentdate.getFullYear() + "-" + (currentdate.getMonth()+1) + "-" +  currentdate.getDate();
+    document.getElementById("dateTime").value = _dateTime;
+    alert(_datetime);
   },
   /**
    * Event handler that is used to save the note form to a File
@@ -178,6 +188,21 @@ var app = {
     app.showPage("savedNotesPage");
     app.listDir(cordova.file.dataDirectory, function(f) {
       console.log(f);
+      if(f.length<1){
+        var listItem = document.createElement("li");
+        listItem.className = "list-item list-item--tappable";
+        var outerDiv = document.createElement("div");
+        outerDiv.className = "list-item__center";
+        var title = document.createElement("div");
+        title.className = "list-item__title";
+        title.style = "opacity:0.4;text-align:center;";
+        title.innerHTML = notificationMessages.emptyListPlaceholder[currentLanguage];
+        outerDiv.appendChild(title);
+        listItem.appendChild(outerDiv);
+        fileEntries.appendChild(listItem);
+      }
+      
+
       for (var i = 0; i < f.length; i++) {
         var listItem = document.createElement("li");
         listItem.className = "list-item list-item--tappable";
@@ -366,7 +391,6 @@ var app = {
         surgery.placeholder = "Какая операция?";
         saveNoteButton.innerHTML = "Сохранить";
         deleteNoteButton.innerHTML = "Удалять";
-        newNoteButton.innerHTML = "Новый";
         break;
     }
   },

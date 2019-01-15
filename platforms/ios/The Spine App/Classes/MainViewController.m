@@ -119,6 +119,10 @@ shouldPreviewElement:(WKPreviewElementInfo *)elementInfo{
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    CGSize screenSize = [[UIScreen mainScreen] bounds].size;
+    self.webView.frame = CGRectMake(0, _navigationBar.frame.origin.y + _navigationBar.frame.size.height, screenSize.width , screenSize.height - _navigationBar.frame.origin.y);
+    
+    
     self.webView.scrollView.bounces = false;
     [self changeLanguage:ViewController.language];
     NSString *command = [NSString stringWithFormat:@"app.changeLanguage('%@')", ViewController.language];
