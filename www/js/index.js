@@ -327,9 +327,8 @@ var app = {
         recommendsPlaceholder.innerHTML = "Препоръчва ли се операция?";
         surgery.placeholder = "Каква операция?";
         requiredFieldsPlaceholder.innerHTML = "Полетата със * са задължителни";
-        savedNotesButton.innerHTML = "Запазени";
+        saveNoteButton.innerHTML = "Запази";
         deleteNoteButton.innerHTML = "Изтрий";
-        newNoteButton.innerHTML = "Нова";
         break;
       case "en":
         dateTimePlaceholder.innerHTML = "Date*";
@@ -340,9 +339,8 @@ var app = {
         recommendsPlaceholder.innerHTML = "Recommends surgery?";
         requiredFieldsPlaceholder.innerHTML = "Fields with * are mandatory";
         surgery.placeholder = "What surgery?";
-        savedNotesButton.innerHTML = "Saved";
+        saveNoteButton.innerHTML = "Save";
         deleteNoteButton.innerHTML = "Delete";
-        newNoteButton.innerHTML = "New";
         break;
       case "de":
         dateTimePlaceholder.innerHTML = "Datum*";
@@ -354,9 +352,8 @@ var app = {
           "Mit * gekennzeichnete Felder sind Pflichtfelder";
         recommendsPlaceholder.innerHTML = "Wird eine Operation empfohlen?";
         surgery.placeholder = "Was für eine Operation?";
-        savedNotesButton.innerHTML = "Gespeichert";
+        saveNoteButton.innerHTML = "Sparen";
         deleteNoteButton.innerHTML = "Löschen";
-        newNoteButton.innerHTML = "Neu";
         break;
       case "ru":
         dateTimePlaceholder.innerHTML = "Дата*";
@@ -367,7 +364,7 @@ var app = {
         recommendsPlaceholder.innerHTML = "Рекомендуется ли операция?";
         requiredFieldsPlaceholder.innerHTML = "Поля отмечанные * обязательны";
         surgery.placeholder = "Какая операция?";
-        savedNotesButton.innerHTML = "Сохраняется";
+        saveNoteButton.innerHTML = "Сохранить";
         deleteNoteButton.innerHTML = "Удалять";
         newNoteButton.innerHTML = "Новый";
         break;

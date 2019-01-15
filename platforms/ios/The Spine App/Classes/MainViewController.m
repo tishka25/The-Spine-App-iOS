@@ -30,7 +30,7 @@
 
 
 
-
+int page = 0;
 //extern NSString *language;
 //
 @implementation MainViewController
@@ -92,12 +92,22 @@
     [self.commandDelegate evalJs:@"app.saveNote(false)"];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 }
-- (IBAction)saveNote:(UIBarButtonItem *)sender {
-    [self.commandDelegate evalJs:@"app.saveNote(true)"];
+- (IBAction)listSavedNotes:(UIBarButtonItem *)sender {
+    [self.commandDelegate evalJs:@"app.listNotes()"];
+    page = 1;
+    
+  self.navigationBar.items[0].leftBarButtonItems[0].image = [UIImage imageNamed:@"back.png"];
 }
 
-- (IBAction)backButton:(UIBarButtonItem *)sender {
-    [self.commandDelegate evalJs:@"app.previousPage()"];
+- (IBAction)leftNavBarButton:(UIBarButtonItem *)sender {
+    if(page == 0){
+        [self.commandDelegate evalJs:@"app.newNote()"];
+    }else if(page == 1){
+        [self.commandDelegate evalJs:@"app.previousPage()"];
+        page = 0;
+        self.navigationBar.items[0].leftBarButtonItems[0].image = nil;
+    }
+    
 }
 
 - (BOOL)webView:(WKWebView *)webView

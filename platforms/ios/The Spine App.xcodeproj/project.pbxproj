@@ -30,6 +30,9 @@
 		41261E0B21E2DCB100CDEB37 /* back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41261E0821E2DCB000CDEB37 /* back@3x.png */; };
 		41261E0C21E2DCB100CDEB37 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 41261E0921E2DCB000CDEB37 /* back.png */; };
 		41261E0D21E2DCB100CDEB37 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41261E0A21E2DCB100CDEB37 /* back@2x.png */; };
+		4137A07E21EE7E7B005AA268 /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = 4137A07B21EE7E7B005AA268 /* list.png */; };
+		4137A07F21EE7E7B005AA268 /* list@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4137A07C21EE7E7B005AA268 /* list@3x.png */; };
+		4137A08021EE7E7B005AA268 /* list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4137A07D21EE7E7B005AA268 /* list@2x.png */; };
 		416D809721E39F3800298403 /* backgroundImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 416D809521E39F3800298403 /* backgroundImage.jpg */; };
 		416D809921E3B34F00298403 /* errorSplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 416D809821E3B34F00298403 /* errorSplash.jpg */; };
 		416D809B21E3B3FF00298403 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416D809A21E3B3FF00298403 /* Reachability.swift */; };
@@ -111,6 +114,9 @@
 		41261E0821E2DCB000CDEB37 /* back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@3x.png"; sourceTree = "<group>"; };
 		41261E0921E2DCB000CDEB37 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		41261E0A21E2DCB100CDEB37 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
+		4137A07B21EE7E7B005AA268 /* list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list.png; sourceTree = "<group>"; };
+		4137A07C21EE7E7B005AA268 /* list@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list@3x.png"; sourceTree = "<group>"; };
+		4137A07D21EE7E7B005AA268 /* list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list@2x.png"; sourceTree = "<group>"; };
 		416D809521E39F3800298403 /* backgroundImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundImage.jpg; sourceTree = "<group>"; };
 		416D809821E3B34F00298403 /* errorSplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = errorSplash.jpg; sourceTree = "<group>"; };
 		416D809A21E3B3FF00298403 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -282,6 +288,9 @@
 		41261DF521E2D84F00CDEB37 /* UIicons */ = {
 			isa = PBXGroup;
 			children = (
+				4137A07B21EE7E7B005AA268 /* list.png */,
+				4137A07D21EE7E7B005AA268 /* list@2x.png */,
+				4137A07C21EE7E7B005AA268 /* list@3x.png */,
 				416D809521E39F3800298403 /* backgroundImage.jpg */,
 				416D809821E3B34F00298403 /* errorSplash.jpg */,
 				41261E0921E2DCB000CDEB37 /* back.png */,
@@ -340,7 +349,7 @@
 				LastUpgradeCheck = 510;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
-						DevelopmentTeam = 7J2H46PQDL;
+						DevelopmentTeam = 6SS46K296C;
 						LastSwiftMigration = 930;
 					};
 				};
@@ -390,6 +399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */,
+				4137A07F21EE7E7B005AA268 /* list@3x.png in Resources */,
 				41261DF721E2D92500CDEB37 /* home@3x.png in Resources */,
 				41261DCE21E134E600CDEB37 /* Main.storyboard in Resources */,
 				41261E0D21E2DCB100CDEB37 /* back@2x.png in Resources */,
@@ -400,6 +410,7 @@
 				41261DFB21E2D9A300CDEB37 /* home.png in Resources */,
 				6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */,
 				416D809921E3B34F00298403 /* errorSplash.jpg in Resources */,
+				4137A07E21EE7E7B005AA268 /* list.png in Resources */,
 				41261E0721E2DAC700CDEB37 /* save.png in Resources */,
 				41261E0521E2DAC700CDEB37 /* save@3x.png in Resources */,
 				41261E0121E2DA4E00CDEB37 /* notebook@2x.png in Resources */,
@@ -407,6 +418,7 @@
 				7740B98A2E104FA2B29984D2 /* CDVNotification.bundle in Resources */,
 				416D809721E39F3800298403 /* backgroundImage.jpg in Resources */,
 				41261E0621E2DAC700CDEB37 /* save@2x.png in Resources */,
+				4137A08021EE7E7B005AA268 /* list@2x.png in Resources */,
 				41261DFA21E2D9A300CDEB37 /* home@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -477,7 +489,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
-				DEVELOPMENT_TEAM = 7J2H46PQDL;
+				DEVELOPMENT_TEAM = 6SS46K296C;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"The Spine App/Plugins/cordova-plugin-mfp\"",
@@ -492,6 +504,7 @@
 				INFOPLIST_FILE = "The Spine App/The Spine App-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.THESPINEAPPLE.spineapp;
 				PRODUCT_NAME = "The Spine App";
 				SWIFT_OBJC_BRIDGING_HEADER = "The Spine App/Classes/The Spine App-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -510,7 +523,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
-				DEVELOPMENT_TEAM = 7J2H46PQDL;
+				DEVELOPMENT_TEAM = 6SS46K296C;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"The Spine App/Plugins/cordova-plugin-mfp\"",
@@ -523,6 +536,7 @@
 				INFOPLIST_FILE = "The Spine App/The Spine App-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.THESPINEAPPLE.spineapp;
 				PRODUCT_NAME = "The Spine App";
 				SWIFT_OBJC_BRIDGING_HEADER = "The Spine App/Classes/The Spine App-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

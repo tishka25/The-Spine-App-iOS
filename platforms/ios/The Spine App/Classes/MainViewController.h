@@ -32,9 +32,11 @@
 
 
 //NSString *currentLanguage;
+//int page = 0;
 
 @interface MainViewController : CDVViewController
 @property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
+
 
 @end
 
