@@ -10,10 +10,6 @@ import WebKit
 import SafariServices
 
 
-
-
-
-
 class ViewController: UIViewController , WKNavigationDelegate {
 
     @IBOutlet weak var webView: WKWebView!
@@ -25,6 +21,9 @@ class ViewController: UIViewController , WKNavigationDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Disable 3D touch
+        webView.allowsLinkPreview = false
         
         //Change the status bar color to math the web app
         self.setStatusBarBackgroundColor(color: UIColor.init(red:7/255, green:55/255, blue:99/255,alpha:1))
@@ -42,18 +41,19 @@ class ViewController: UIViewController , WKNavigationDelegate {
     }
     
     
-
+    
     func webView(_ webView: WKWebView,
                  didFinish navigation: WKNavigation!) {
         print("Loaded")
         //Send to Cordova JS what language we are using
         ViewController.language = String((webView.url?.absoluteString.suffix(2))!)
         print(ViewController.language);
-//        Remove the spiner after loading the page
+        
+        //Remove the spiner after loading the page
         UIViewController.removeSpinner(spinner: spinner)
+        
     }
     
-
     //Function to check redirects and loads
     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
         let url = webView.url?.absoluteURL.host
@@ -66,12 +66,7 @@ class ViewController: UIViewController , WKNavigationDelegate {
         }
     }
     //
-    
-    //Change the Status bar apperaence
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-    //
+
     
     override func viewWillAppear(_ animated: Bool) {
         self.setNeedsStatusBarAppearanceUpdate()
@@ -80,20 +75,14 @@ class ViewController: UIViewController , WKNavigationDelegate {
             errorView = UIViewController.displayErrorSplash(onView: self.view)
             print("No internet");
         }
-        //Remove error splash
+            //Remove error splash
         else if (errorView != nil && Reachability.isConnectedToNetwork()){
             ViewController.removeErrorSplash(errorView: errorView)
             //Open the Web page
             loadWebView(url: initialURL!)
         }
-
+        
     }
-    
-    
-    override func viewWillDisappear(_ animated: Bool) {
-    }
-    
-    
     //Change the status bar color
     func setStatusBarBackgroundColor(color: UIColor) {
         guard let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView else { return }
@@ -106,8 +95,7 @@ class ViewController: UIViewController , WKNavigationDelegate {
         webView.scrollView.bounces = false;
         webView.load(myRequest)
     }
-    
-    
+
     /*
     // MARK: - Navigation
 
@@ -118,11 +106,7 @@ class ViewController: UIViewController , WKNavigationDelegate {
     }
     */
     
-    //Disable 3d touch
-    func webView(_ webView: WKWebView, shouldPreviewElement elementInfo: WKPreviewElementInfo) -> Bool {
-        return false
-    }
-    //
+
 
 }
 
@@ -134,6 +118,7 @@ extension UIViewController {
         let screenSize = UIScreen.main.bounds.size;
         imageView.frame = CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height)
         
+
         
         let spinnerView = UIView.init(frame: onView.bounds)
         spinnerView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
@@ -151,7 +136,7 @@ extension UIViewController {
     }
     class func displayErrorSplash(onView : UIView) ->UIView{
         let errorView = UIView.init(frame: onView.bounds)
-        //TODO add a refresh button
+        
         let image = UIImage(named: "errorSplash.jpg");
         let imageView = UIImageView(image: image!)
         let screenSize = UIScreen.main.bounds.size;
@@ -173,19 +158,6 @@ extension UIViewController {
         DispatchQueue.main.async {
             spinner.removeFromSuperview()
         }
-    }
-}
-
-extension ViewController : WKScriptMessageHandler {
-    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-        // Callback from javascript: window.webkit.messageHandlers.MyObserver.postMessage(message)
-        let text = message.body as! String;
-        let alertController = UIAlertController(title: "Javascript said:", message: text, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
-            print("OK")
-        }
-        alertController.addAction(okAction)
-        present(alertController, animated: true, completion: nil)
     }
 }
 

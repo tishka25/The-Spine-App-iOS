@@ -26,16 +26,15 @@
 //
 
 #import "AppDelegate.h"
-#import "NotebookViewController.h"
-
+#import "MainViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
-//    self.viewController = [[NotebookViewController alloc] init];
+//    self.viewController = [[MainViewController alloc] init];
 //    return [super application:application didFinishLaunchingWithOptions:launchOptions];
-//    LocalServer.initWebServer();
+    
     return YES;
 }
 - (void)applicationWillTerminate:(UIApplication *)application{

@@ -13,8 +13,10 @@
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		235434C4325E4E559A613AC9 /* CDVFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 8697AB0FEF264AB2B43ED47E /* CDVFile.m */; };
 		301BF552109A68D80062928A /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF535109A57CC0062928A /* libCordova.a */; };
+		302D95F114D2391D003F00A1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 302D95EF14D2391D003F00A1 /* MainViewController.m */; };
 		302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 302D95F014D2391D003F00A1 /* MainViewController.xib */; };
 		41261DCE21E134E600CDEB37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41261DCD21E134E600CDEB37 /* Main.storyboard */; };
+		41261DD421E1395200CDEB37 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41261DD321E1395200CDEB37 /* ViewController.swift */; };
 		41261DF121E18AF500CDEB37 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41261DF021E18AF500CDEB37 /* TabBarController.swift */; };
 		41261DF721E2D92500CDEB37 /* home@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41261DF621E2D92400CDEB37 /* home@3x.png */; };
 		41261DFA21E2D9A300CDEB37 /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41261DF821E2D9A300CDEB37 /* home@2x.png */; };
@@ -28,11 +30,9 @@
 		41261E0B21E2DCB100CDEB37 /* back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41261E0821E2DCB000CDEB37 /* back@3x.png */; };
 		41261E0C21E2DCB100CDEB37 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 41261E0921E2DCB000CDEB37 /* back.png */; };
 		41261E0D21E2DCB100CDEB37 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41261E0A21E2DCB100CDEB37 /* back@2x.png */; };
-		412E07B821ED34E50053451A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412E07B721ED34E50053451A /* ViewController.swift */; };
 		416D809721E39F3800298403 /* backgroundImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 416D809521E39F3800298403 /* backgroundImage.jpg */; };
 		416D809921E3B34F00298403 /* errorSplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 416D809821E3B34F00298403 /* errorSplash.jpg */; };
 		416D809B21E3B3FF00298403 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416D809A21E3B3FF00298403 /* Reachability.swift */; };
-		41A8DAB721ECBDEF004F9A68 /* NotebookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A8DAB621ECBDEF004F9A68 /* NotebookViewController.m */; };
 		484E411733CA4AA3B7266C27 /* CDVWKWebViewEngine+FileXhrFix.m in Sources */ = {isa = PBXBuildFile; fileRef = 00818991013F4B81984E146C /* CDVWKWebViewEngine+FileXhrFix.m */; };
 		56D05C3B06F14DC4BE7D6F07 /* CDVWKWebViewEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = E014E63AA6ED4F32BD7997AA /* CDVWKWebViewEngine.m */; };
 		6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */; };
@@ -42,7 +42,6 @@
 		8F4703B2C7D0490092A32E0C /* CDVWKWebViewUIDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3E1E8EB6A445A1844C6767 /* CDVWKWebViewUIDelegate.m */; };
 		AA0FAD9CEAD3407DA7998D3F /* CDVAssetLibraryFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = C71642C04D0042DE9F9B346A /* CDVAssetLibraryFilesystem.m */; };
 		AD1C07F7F94F4CCA89BB95C1 /* CDVInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 286C69854DB547EE8EC795D3 /* CDVInAppBrowser.m */; };
-		B02BAAFA14B7A259CA45CFC8 /* Pods_The_Spine_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C80D7C59C0FE8ADD025DD9 /* Pods_The_Spine_App.framework */; };
 		BE7AE8AECFB84BC09AEE1A92 /* CDVLocalFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 295CAD7C8737412BB973A7ED /* CDVLocalFilesystem.m */; };
 		CBC69123AFA144B09A3F972D /* CDVWKProcessPoolFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F32A5C66D964A2798849198 /* CDVWKProcessPoolFactory.m */; };
 		E621C68DF1634589976EDBD2 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C55DBC710DA4DC5B100F7DB /* WebKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -89,14 +88,16 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		301BF52D109A57CC0062928A /* CordovaLib/CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = CordovaLib/CordovaLib.xcodeproj; sourceTree = "<group>"; };
 		301BF56E109A69640062928A /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = SOURCE_ROOT; };
+		302D95EE14D2391D003F00A1 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		302D95EF14D2391D003F00A1 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		302D95F014D2391D003F00A1 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		3047A50F1AB8059700498E2A /* build-debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "build-debug.xcconfig"; path = "cordova/build-debug.xcconfig"; sourceTree = SOURCE_ROOT; };
 		3047A5101AB8059700498E2A /* build-release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "build-release.xcconfig"; path = "cordova/build-release.xcconfig"; sourceTree = SOURCE_ROOT; };
 		3047A5111AB8059700498E2A /* build.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = build.xcconfig; path = cordova/build.xcconfig; sourceTree = SOURCE_ROOT; };
-		30C80D7C59C0FE8ADD025DD9 /* Pods_The_Spine_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_Spine_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32CA4F630368D1EE00C91783 /* The Spine App-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "The Spine App-Prefix.pch"; sourceTree = "<group>"; };
 		41261DCD21E134E600CDEB37 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		41261DD221E1395100CDEB37 /* The Spine App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "The Spine App-Bridging-Header.h"; sourceTree = "<group>"; };
+		41261DD321E1395200CDEB37 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		41261DF021E18AF500CDEB37 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		41261DF621E2D92400CDEB37 /* home@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@3x.png"; sourceTree = "<group>"; };
 		41261DF821E2D9A300CDEB37 /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@2x.png"; sourceTree = "<group>"; };
@@ -110,12 +111,9 @@
 		41261E0821E2DCB000CDEB37 /* back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@3x.png"; sourceTree = "<group>"; };
 		41261E0921E2DCB000CDEB37 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		41261E0A21E2DCB100CDEB37 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
-		412E07B721ED34E50053451A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		416D809521E39F3800298403 /* backgroundImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundImage.jpg; sourceTree = "<group>"; };
 		416D809821E3B34F00298403 /* errorSplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = errorSplash.jpg; sourceTree = "<group>"; };
 		416D809A21E3B3FF00298403 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
-		41A8DAB521ECBDEF004F9A68 /* NotebookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotebookViewController.h; sourceTree = "<group>"; };
-		41A8DAB621ECBDEF004F9A68 /* NotebookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotebookViewController.m; sourceTree = "<group>"; };
 		4C6E0A9985554D8E8A2C2C14 /* CDVWKWebViewEngine+FileXhrFix.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "CDVWKWebViewEngine+FileXhrFix.h"; path = "cordova-plugin-wkwebviewxhrfix/CDVWKWebViewEngine+FileXhrFix.h"; sourceTree = "<group>"; };
 		5726BA1F04384EF29EA5B9B8 /* CDVLocalFilesystem.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVLocalFilesystem.h; path = "cordova-plugin-file/CDVLocalFilesystem.h"; sourceTree = "<group>"; };
 		6044D90F2684472B9107AA39 /* CDVWKWebViewUIDelegate.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVWKWebViewUIDelegate.h; path = "cordova-plugin-wkwebview-engine/CDVWKWebViewUIDelegate.h"; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 				8D69A00FC1FB4555B7C44F66 /* AudioToolbox.framework in Frameworks */,
 				E621C68DF1634589976EDBD2 /* WebKit.framework in Frameworks */,
-				B02BAAFA14B7A259CA45CFC8 /* Pods_The_Spine_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,12 +156,12 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				41A8DAB521ECBDEF004F9A68 /* NotebookViewController.h */,
-				41A8DAB621ECBDEF004F9A68 /* NotebookViewController.m */,
+				302D95EE14D2391D003F00A1 /* MainViewController.h */,
+				302D95EF14D2391D003F00A1 /* MainViewController.m */,
 				302D95F014D2391D003F00A1 /* MainViewController.xib */,
 				1D3623240D0F684500981E51 /* AppDelegate.h */,
 				1D3623250D0F684500981E51 /* AppDelegate.m */,
-				412E07B721ED34E50053451A /* ViewController.swift */,
+				41261DD321E1395200CDEB37 /* ViewController.swift */,
 				416D809A21E3B3FF00298403 /* Reachability.swift */,
 				41261DF021E18AF500CDEB37 /* TabBarController.swift */,
 				41261DCD21E134E600CDEB37 /* Main.storyboard */,
@@ -195,7 +192,6 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				3078C0752B94819909537518 /* Pods */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -230,7 +226,6 @@
 			children = (
 				26375C0DD7534C6BBA61F457 /* AudioToolbox.framework */,
 				9C55DBC710DA4DC5B100F7DB /* WebKit.framework */,
-				30C80D7C59C0FE8ADD025DD9 /* Pods_The_Spine_App.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -252,13 +247,6 @@
 				3047A5111AB8059700498E2A /* build.xcconfig */,
 			);
 			name = config;
-			sourceTree = "<group>";
-		};
-		3078C0752B94819909537518 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		307C750510C5A3420062BCA9 /* Plugins */ = {
@@ -328,7 +316,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "The Spine App" */;
 			buildPhases = (
-				EE5F7D3F0D5A4205782F7F81 /* [CP] Check Pods Manifest.lock */,
 				304B58A110DAC018002A0835 /* Copy www directory */,
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
@@ -350,10 +337,10 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 930;
+				LastUpgradeCheck = 510;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
-						DevelopmentTeam = 6SS46K296C;
+						DevelopmentTeam = 7J2H46PQDL;
 						LastSwiftMigration = 930;
 					};
 				};
@@ -366,7 +353,6 @@
 				en,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
-			productRefGroup = 19C28FACFE9D520D11CA2CBB /* Products */;
 			projectDirPath = "";
 			projectReferences = (
 				{
@@ -443,24 +429,6 @@
 			shellScript = "NODEJS_PATH=/usr/local/bin; NVM_NODE_PATH=~/.nvm/versions/node/`nvm version 2>/dev/null`/bin; N_NODE_PATH=`find /usr/local/n/versions/node/* -maxdepth 0 -type d 2>/dev/null | tail -1`/bin; XCODE_NODE_PATH=`xcode-select --print-path`/usr/share/xcs/Node/bin; PATH=$NODEJS_PATH:$NVM_NODE_PATH:$N_NODE_PATH:$XCODE_NODE_PATH:$PATH && node cordova/lib/copy-www-build-step.js";
 			showEnvVarsInLog = 0;
 		};
-		EE5F7D3F0D5A4205782F7F81 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-The Spine App-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${SRCROOT}/Podfile.lock\" \"${SRCROOT}/Pods/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -468,18 +436,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41261DD421E1395200CDEB37 /* ViewController.swift in Sources */,
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				41261DF121E18AF500CDEB37 /* TabBarController.swift in Sources */,
+				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
 				1D3C8B7108FC48809B402A6D /* CDVDevice.m in Sources */,
 				416D809B21E3B3FF00298403 /* Reachability.swift in Sources */,
-				41A8DAB721ECBDEF004F9A68 /* NotebookViewController.m in Sources */,
 				8DCA910804E944C48E5C868C /* CDVNotification.m in Sources */,
 				235434C4325E4E559A613AC9 /* CDVFile.m in Sources */,
 				BE7AE8AECFB84BC09AEE1A92 /* CDVLocalFilesystem.m in Sources */,
 				AA0FAD9CEAD3407DA7998D3F /* CDVAssetLibraryFilesystem.m in Sources */,
 				56D05C3B06F14DC4BE7D6F07 /* CDVWKWebViewEngine.m in Sources */,
-				412E07B821ED34E50053451A /* ViewController.swift in Sources */,
 				8F4703B2C7D0490092A32E0C /* CDVWKWebViewUIDelegate.m in Sources */,
 				CBC69123AFA144B09A3F972D /* CDVWKProcessPoolFactory.m in Sources */,
 				484E411733CA4AA3B7266C27 /* CDVWKWebViewEngine+FileXhrFix.m in Sources */,
@@ -509,156 +477,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
-				DEVELOPMENT_TEAM = 6SS46K296C;
+				DEVELOPMENT_TEAM = 7J2H46PQDL;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-mfp",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-mfp",
-					$PODS_CONFIGURATION_BUILD_DIR/Swifter,
-					"$(SRCROOT)/**",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					"$(PROJECT_DIR)",
+					"\"The Spine App/Plugins/cordova-plugin-mfp\"",
+					"\"The Spine App/Plugins/cordova-plugin-mfp\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -668,13 +491,7 @@
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "The Spine App/The Spine App-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"$(inherited)",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.THESPINEAPPLE.spineapp;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				PRODUCT_NAME = "The Spine App";
 				SWIFT_OBJC_BRIDGING_HEADER = "The Spine App/Classes/The Spine App-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -693,170 +510,19 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
-				DEVELOPMENT_TEAM = 6SS46K296C;
+				DEVELOPMENT_TEAM = 7J2H46PQDL;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-mfp",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-mfp",
-					$PODS_CONFIGURATION_BUILD_DIR/Swifter,
-					"$(SRCROOT)/**",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					The,
-					Spine,
-					"App/Plugins/cordova-plugin-firebase",
-					"$(PROJECT_DIR)",
+					"\"The Spine App/Plugins/cordova-plugin-mfp\"",
+					"\"The Spine App/Plugins/cordova-plugin-mfp\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "The Spine App/The Spine App-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "The Spine App/The Spine App-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"$(inherited)",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.THESPINEAPPLE.spineapp;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				PRODUCT_NAME = "The Spine App";
 				SWIFT_OBJC_BRIDGING_HEADER = "The Spine App/Classes/The Spine App-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
@@ -870,30 +536,15 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -911,29 +562,15 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -941,7 +578,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
 		};

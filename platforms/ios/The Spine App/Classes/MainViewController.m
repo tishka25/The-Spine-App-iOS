@@ -6,9 +6,9 @@
  to you under the Apache License, Version 2.0 (the
  "License"); you may not use this file except in compliance
  with the License.  You may obtain a copy of the License at
- 
+
  http://www.apache.org/licenses/LICENSE-2.0
- 
+
  Unless required by applicable law or agreed to in writing,
  software distributed under the License is distributed on an
  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -18,14 +18,14 @@
  */
 
 //
-//  NotebookViewController.h
+//  MainViewController.h
 //  The Spine App
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
 //  Copyright ___ORGANIZATIONNAME___ ___YEAR___. All rights reserved.
 //
 
-#import "NotebookViewController.h"
+#import "MainViewController.h"
 #import "The_Spine_App-Swift.h"
 
 
@@ -33,7 +33,7 @@
 
 //extern NSString *language;
 //
-@implementation NotebookViewController
+@implementation MainViewController
 
 
 //@synthesize currentLanguage;
@@ -66,11 +66,12 @@
 {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-    
+
     // Release any cached data, images, etc that aren't in use.
 }
 
 #pragma mark View lifecycle
+
 - (void)viewWillAppear:(BOOL)animated
 {
     // View defaults to full size.  If you want to customize the view's size, or its subviews (e.g. webView),
@@ -78,20 +79,18 @@
     CGSize screenSize = [[UIScreen mainScreen] bounds].size;
     self.webView.frame = CGRectMake(0, _navigationBar.frame.origin.y + _navigationBar.frame.size.height, screenSize.width , screenSize.height - _navigationBar.frame.origin.y);
     
-    self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
-    
-    
-    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
     [self changeLanguage:ViewController.language];
     NSString *command = [NSString stringWithFormat:@"app.changeLanguage('%@')", ViewController.language];
     [self.commandDelegate evalJs:command];
+    
     [super viewWillAppear:animated];
 }
 -(void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     [self.commandDelegate evalJs:@"app.saveNote(false)"];
-    //    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 }
 - (IBAction)saveNote:(UIBarButtonItem *)sender {
     [self.commandDelegate evalJs:@"app.saveNote(true)"];
@@ -110,14 +109,11 @@ shouldPreviewElement:(WKPreviewElementInfo *)elementInfo{
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self setNeedsStatusBarAppearanceUpdate];
-    
-    
     self.webView.scrollView.bounces = false;
     [self changeLanguage:ViewController.language];
     NSString *command = [NSString stringWithFormat:@"app.changeLanguage('%@')", ViewController.language];
     [self.commandDelegate evalJs:command];
-    
+  
 }
 
 - (void)viewDidUnload
@@ -143,38 +139,38 @@ shouldPreviewElement:(WKPreviewElementInfo *)elementInfo{
 /* Comment out the block below to over-ride */
 
 /*
- - (UIWebView*) newCordovaViewWithFrame:(CGRect)bounds
- {
- return[super newCordovaViewWithFrame:bounds];
- }
- 
- // CB-12098
- #if __IPHONE_OS_VERSION_MAX_ALLOWED < 90000
- - (NSUInteger)supportedInterfaceOrientations
- #else
- - (UIInterfaceOrientationMask)supportedInterfaceOrientations
- #endif
- {
- return [super supportedInterfaceOrientations];
- }
- 
- - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
- {
- return [super shouldAutorotateToInterfaceOrientation:interfaceOrientation];
- }
- 
- - (BOOL)shouldAutorotate
- {
- return [super shouldAutorotate];
- }
- */
+- (UIWebView*) newCordovaViewWithFrame:(CGRect)bounds
+{
+    return[super newCordovaViewWithFrame:bounds];
+}
+
+// CB-12098
+#if __IPHONE_OS_VERSION_MAX_ALLOWED < 90000  
+- (NSUInteger)supportedInterfaceOrientations
+#else  
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+#endif
+{
+    return [super supportedInterfaceOrientations];
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation 
+{
+    return [super shouldAutorotateToInterfaceOrientation:interfaceOrientation];
+}
+
+- (BOOL)shouldAutorotate 
+{
+    return [super shouldAutorotate];
+}
+*/
 
 @end
 
 @implementation MainCommandDelegate
 
 /* To override the methods, uncomment the line in the init function(s)
- in NotebookViewController.m
+   in MainViewController.m
  */
 
 #pragma mark CDVCommandDelegate implementation
@@ -194,7 +190,7 @@ shouldPreviewElement:(WKPreviewElementInfo *)elementInfo{
 @implementation MainCommandQueue
 
 /* To override, uncomment the line in the init function(s)
- in NotebookViewController.m
+   in MainViewController.m
  */
 - (BOOL)execute:(CDVInvokedUrlCommand*)command
 {

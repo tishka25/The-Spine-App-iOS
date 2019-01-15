@@ -26,7 +26,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         if viewController is ViewController {
             setStatusBarBackgroundColor(color: UIColor.init(red:7/255, green:55/255, blue:99/255,alpha:1))
             self.navigationController?.navigationBar.barStyle = UIBarStyle.default
-        } else if viewController is NotebookViewController {
+        } else if viewController is MainViewController {
             setStatusBarBackgroundColor(color: UIColor.init(red:1, green:1, blue:1,alpha:1))
             self.navigationController?.navigationBar.barStyle = UIBarStyle.black
         }
